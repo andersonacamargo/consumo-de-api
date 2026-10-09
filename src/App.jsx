@@ -1,22 +1,27 @@
 import './App.css'
 import MovieEe from './components/movie_search/movie_ee';
 import MovieTe from './components/movie_search/movie_te';
-import MovieIf from './components/movie_search/movie_if';
-
-
-
+import ThemeButton from './components/themeButton';
+import {useState} from 'react'
 function App() {
- 
-  return (                                      //se passar pelos ifs anteriores retorna essa pagina
+  const [dark, setDark] = useState(false)
+
+  const theme = dark ? 'theme-dark' : 'theme-light'
+
+  return (
     <>
-      <section id="center">                     {/* mantive o retorno do padrão da pagina gerado pelo vite*/}
-     
-        <MovieEe />
-        <MovieTe />
-        <MovieIf />
-  </section>
+      <section id="center">
+      <ThemeButton dark={dark}
+        onToggle={() => setDark(!dark)} />
+        <div className={theme}>
+          <MovieEe />
+        </div>
+        <div className='theme-dark'>
+          <MovieTe />
+        </div>
+      </section>
     </>
   )
 }
 
-export default App                             //retorna minha pagina ou componente
+export default App                           

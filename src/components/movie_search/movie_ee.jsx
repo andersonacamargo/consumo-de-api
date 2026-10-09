@@ -56,7 +56,8 @@ export default function MovieEe() {
         <ul className="movie-list">
           {movies.map((movie) => (
             <li key={movie.imdbID}>
-              <strong>{movie.Title}</strong> ({movie.Year})
+             {/* <img src= {movie.Poster}/> */}
+             <strong>{movie.Title}</strong> ({movie.Year}) 
             </li>
           ))}
         </ul>

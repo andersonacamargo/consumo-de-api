@@ -2,7 +2,7 @@ import './App.css'
 import MovieEe from './components/movie_search/movie_ee';
 import MovieTe from './components/movie_search/movie_te';
 import ThemeButton from './components/themeButton';
-import {useState} from 'react'
+import { useState } from 'react'
 function App() {
   const [dark, setDark] = useState(false)
 
@@ -10,9 +10,14 @@ function App() {
 
   return (
     <>
-      <section id="center">
+      <section className="center">
       <ThemeButton dark={dark}
-        onToggle={() => setDark(!dark)} />
+          onToggle={() => setDark(!dark)} />
+        <div className="div-filha-do-center"> 
+        <ThemeButton dark={dark}
+          onToggle={() => setDark(!dark)} />
+        </div>
+    
         <div className={theme}>
           <MovieEe />
         </div>

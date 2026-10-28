@@ -41,8 +41,8 @@ export default function MovieTe() {
 
   return (
     <div className="card">
-      <h2>Nível Médio: Consumo de API OMDb com Debounce operador ternario</h2>
-      <p>Busca filmes assim que você para de digitar.</p>
+     
+      <h2>Busca filmes assim que você para de digitar.</h2>
       <input 
         type="text" 
         value={query} 

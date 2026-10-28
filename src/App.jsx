@@ -1,6 +1,7 @@
 import './App.css'
 import MovieEe from './components/movie_search/movie_ee';
 import MovieTe from './components/movie_search/movie_te';
+import PokeApi from './components/pokeApi';
 import ThemeButton from './components/themeButton';
 import { useState } from 'react'
 function App() {
@@ -12,17 +13,12 @@ function App() {
     <>
       <section className="center">
       <ThemeButton dark={dark}
-          onToggle={() => setDark(!dark)} />
-        <div className="div-filha-do-center"> 
-        <ThemeButton dark={dark}
-          onToggle={() => setDark(!dark)} />
-        </div>
-    
-        <div className={theme}>
-          <MovieEe />
-        </div>
-        <div className='theme-dark'>
+          onToggle={() => setDark(!dark)} /> 
+    <h2>Consumo de API OMDb com Debounce</h2>
+        <div className= {theme}>
+       
           <MovieTe />
+          <PokeApi />
         </div>
       </section>
     </>

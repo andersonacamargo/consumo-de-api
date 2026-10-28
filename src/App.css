@@ -11,7 +11,7 @@ body {
 
 .center {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 24px;
@@ -25,7 +25,7 @@ body {
 
 .center > * {
   width: 100%;
-  max-width: 500px;
+  max-width: 900px;
 }
 
 .center button {
@@ -59,6 +59,14 @@ body {
   background: #1d4ed8;
 }
 
+.theme-light,
+.theme-dark {
+ display: flex;
+ flex-direction: row;
+ gap: 100px;
+ width: 100%;
+}
+
 /* ========================================
     Tema claro
 ======================================== */
@@ -70,6 +78,15 @@ body {
   border: 1px solid #dbe3ef;
   border-radius: 12px;
   
+}
+
+.theme-light button{
+   margin-top: 8px; 
+     padding: 24px;
+  background: #2563eb;
+  color: white;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
 }
 
 .theme-light input {
@@ -89,6 +106,8 @@ body {
 
 }
 
+
+
 /* ========================================
     Tema escuro
 ======================================== */
@@ -104,7 +123,15 @@ body {
 .theme-dark h2 {
   color: white;
 }
-
+.theme-dark button{
+   margin-top: 8px; 
+   width: 100%;
+  padding: 12px;
+  background: #1f2937;
+  color: #ffffff;
+  border: 1px solid #6366f1;
+  border-radius: 20px;
+}
 .theme-dark input {
   width: 100%;
   padding: 12px;
@@ -132,7 +159,7 @@ body {
    RESPONSIVIDADE
 ======================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .center {
     flex-direction: column;
     gap: 16px;
@@ -141,6 +168,8 @@ body {
 
   .theme-light,
   .theme-dark {
+        flex-direction: row;
+    gap: 30px;
     padding: 16px;
   }
 }
@@ -154,6 +183,8 @@ body {
 
   .theme-light,
   .theme-dark {
+        flex-direction: column;
+
     padding: 10px;
   }
 }

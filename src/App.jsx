@@ -12,11 +12,11 @@ function App() {
   return (
     <>
       <section className="center">
-      <ThemeButton dark={dark}
-          onToggle={() => setDark(!dark)} /> 
-    <h2>Consumo de API OMDb com Debounce</h2>
-        <div className= {theme}>
-       
+        <ThemeButton dark={dark}
+          onToggle={() => setDark(!dark)} />
+        <h2>Consumo de API OMDb(filmes) e Pokemon com Debounce</h2>
+        <div className={theme}>
+
           <MovieTe />
           <PokeApi />
         </div>

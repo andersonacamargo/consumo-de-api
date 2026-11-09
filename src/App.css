@@ -195,7 +195,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .center {
     flex-direction: column;
     gap: 10px;
